@@ -645,6 +645,231 @@ nav .mbr-section-btn {
     transform: translateY(-2px);
     box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
 }
+
+/* Smooth Scroll Effect */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Enhanced Navigation Link Effects */
+.menu .navbar .nav-link {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.menu .navbar .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #667eea, #764ba2);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.menu .navbar .nav-link:hover::after {
+    width: 80%;
+}
+
+.menu .navbar .nav-link:active {
+    transform: translateY(1px);
+}
+
+/* Scroll Animation for Sections */
+section {
+    scroll-margin-top: 100px;
+}
+
+/* Enhanced Hover Effects for Navigation */
+.menu .navbar .nav-link:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Active Navigation Link */
+.menu .navbar .nav-link.active {
+    background: rgba(102, 126, 234, 0.2);
+    color: #667eea !important;
+    border-radius: 10px;
+    position: relative;
+}
+
+.menu .navbar .nav-link.active::after {
+    width: 100% !important;
+    background: linear-gradient(90deg, #667eea, #764ba2);
+    height: 3px;
+}
+
+/* Click Animation */
+.menu .navbar .nav-link {
+    transition: transform 0.15s ease;
+}
+
+.menu .navbar .nav-link:active {
+    transform: scale(0.95);
+}
+
+/* Horizontal Project Cards */
+.project-card-horizontal {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 30px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    min-height: 200px;
+}
+
+.project-card-horizontal:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.project-image-horizontal {
+    flex-shrink: 0;
+    width: 300px;
+    height: 180px;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+}
+
+.project-image-horizontal img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.3s ease;
+    border-radius: 15px;
+}
+
+.project-card-horizontal:hover .project-image-horizontal img {
+    transform: scale(1.05);
+}
+
+.project-content-horizontal {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.project-header-horizontal {
+    margin-bottom: 15px;
+}
+
+.project-title-horizontal {
+    color: #ffffff;
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+.project-tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+.tech-tag {
+    background: rgba(102, 126, 234, 0.2);
+    color: #667eea;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    border: 1px solid rgba(102, 126, 234, 0.3);
+    transition: all 0.3s ease;
+}
+
+.tech-tag:hover {
+    background: rgba(102, 126, 234, 0.3);
+    transform: translateY(-1px);
+}
+
+.project-description-horizontal {
+    flex: 1;
+    margin-bottom: 20px;
+}
+
+.project-description-horizontal p {
+    color: #ffffff;
+    line-height: 1.6;
+    margin: 0;
+    opacity: 0.9;
+}
+
+.project-links {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.project-links .btn {
+    border-radius: 25px;
+    padding: 8px 20px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.project-links .btn-primary {
+    background: linear-gradient(45deg, #667eea 0%, #764ba2 100%);
+    border: none;
+}
+
+.project-links .btn-outline-primary {
+    background: transparent;
+    border: 2px solid #667eea;
+    color: #667eea;
+}
+
+.project-links .btn-outline-primary:hover {
+    background: #667eea;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.project-links .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+}
+
+/* Responsive Design for Horizontal Cards */
+@media (max-width: 768px) {
+    .project-card-horizontal {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+    
+    .project-image-horizontal {
+        width: 100%;
+        height: 200px;
+    }
+    
+    .project-links {
+        justify-content: center;
+    }
+    
+    .project-tech-stack {
+        justify-content: center;
+    }
+}
 @media (min-width: 768px) and (max-width: 991px) {
     .menu .navbar-toggleable-sm .navbar-nav {
         display: -ms-flexbox;
