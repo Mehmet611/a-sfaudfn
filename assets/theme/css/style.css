@@ -543,6 +543,18 @@ nav .mbr-section-btn {
 .menu .navbar-brand .navbar-logo img {
     display: -webkit-flex;
     width: auto;
+    border-radius: 50% !important;
+    object-fit: cover !important;
+    width: 50px !important;
+    height: 50px !important;
+    border: 2px solid rgba(255, 255, 255, 0.2) !important;
+    transition: all 0.3s ease !important;
+}
+
+.menu .navbar-brand .navbar-logo img:hover {
+    border-color: rgba(255, 255, 255, 0.4) !important;
+    transform: scale(1.05) !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3) !important;
 }
 
 /* Modern Header Bar Styling */
@@ -553,6 +565,18 @@ nav .mbr-section-btn {
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
     border: 1px solid rgba(255, 255, 255, 0.1);
     transition: all 0.3s ease;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    z-index: 1000 !important;
+    width: 100% !important;
+}
+
+/* Ensure header stays transparent on scroll */
+.menu .navbar.navbar-fixed-top {
+    backdrop-filter: blur(15px) !important;
+    background: rgba(0, 0, 0, 0.3) !important;
 }
 
 .menu .navbar:hover {
